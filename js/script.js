@@ -11,7 +11,7 @@ $( function() {
 		},
 		
 		test: function() {
-			alert('It works!');
+			
 		}
 	}
 	
