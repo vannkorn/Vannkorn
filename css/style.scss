@@ -4,8 +4,6 @@
 *	Author: Vannkorn Tepken
 */
 
-@import "compass/reset";
-
 $colorBg: #dbe9f4;
 $colorGrey: #f5f7fb;
 $colorWhite: #ffffff;
@@ -23,9 +21,28 @@ $colorBorder: #d4dee6;
 }
 
 body {
-	font-family: 'Hanuman', Arial, Verdana, Sans-serif;
-	font-size: 12px;
+	font-family: 'Open Sans', Sans-serif;
+	font-size: 18px;
 	color: $colorBlack;
+	
+	p {
+		font-size: 1em;
+		line-height: 1.5em;
+		margin-bottom: 1.2em;
+		-webkit-font-smoothing: antialiased;
+	}
+	
+	.nav {
+		float: right;
+		
+		li {
+			a {
+				&:hover {
+					background-color: #e7e7e7;
+				}
+			}
+		}	
+	}
 	
 	.main {
 		margin-top: 50px;
@@ -35,8 +52,39 @@ body {
 			display: block;
 			margin: 50px auto;
 		}
+		.nav-left {
+			font-size: 115%;
+			
+			ul {
+				text-align: center;
+				
+				li {
+					display: inline-block;
+				}
+			}
+		}
+		.short-description {
+			p {
+				text-align: center;
+				padding: 1em;
+			}
+		}
+		.about {
+			padding: 2em 1em;
+			
+			.blockquote {
+				padding-bottom: 2em;
+			}
+		}
 	}
 }
+
+@media screen and ( max-width: 767px ) {
+	.nav {
+		float: none !important;
+	}
+}
+
 /* ---------------------------- Miscillanoeus ------------------ */
 
 .clearfix:before {

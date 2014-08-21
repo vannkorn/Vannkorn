@@ -7,11 +7,19 @@
 $( function() {
 	var Vannkorn = {
 		init: function() {
-			this.test();
+			this.closeNavbar();
 		},
 		
-		test: function() {
-			
+		closeNavbar: function() {
+			$('.navbar-collapse li a').each( function() {
+				$(this).click( function( e ) {
+					var mq = window.matchMedia( "(max-width: 767px)" );
+					if ( mq.matches ) {
+						// Call to native toggle action of Bootstrap 3
+						$(".navbar-toggle").click();
+					}
+				});
+			});
 		}
 	}
 	
