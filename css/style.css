@@ -63,6 +63,7 @@ body .main .portfolio figure {
   height: 224px;
   cursor: pointer;
   margin-bottom: 5px;
+  padding: 0;
   /*---------------*/
   /***** Sarah *****/
   /*---------------*/
@@ -75,10 +76,10 @@ body .main .portfolio figure img {
 }
 body .main .portfolio figure figcaption {
   padding: 2em;
-  color: #333;
+  color: #fff;
   text-align: left;
   text-transform: uppercase;
-  font-size: 1.25em;
+  font-size: 1em;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   position: absolute;
@@ -106,13 +107,17 @@ body .main .portfolio figure h2 {
   word-spacing: -0.15em;
   font-weight: 300;
   margin: 0;
+  font-size: 1.5em;
+  visibility: hidden;
 }
 body .main .portfolio figure p {
   margin: 0;
   letter-spacing: 1px;
   font-size: 68.5%;
+  visibility: hidden;
 }
 body .main .portfolio figure.effect-sarah img {
+  opacity: 1;
   width: -webkit-calc(100% + 20px);
   width: calc(100% + 20px);
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -122,15 +127,22 @@ body .main .portfolio figure.effect-sarah img {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
+body .main .portfolio figure.effect-sarah:hover {
+  background: #00cccc;
+}
 body .main .portfolio figure.effect-sarah:hover img {
-  opacity: 0.6;
+  opacity: 0.1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 body .main .portfolio figure.effect-sarah:hover p {
+  visibility: visible;
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+}
+body .main .portfolio figure.effect-sarah:hover h2 {
+  visibility: visible;
 }
 body .main .portfolio figure.effect-sarah:hover h2::after {
   -webkit-transform: translate3d(0, 0, 0);
@@ -176,11 +188,13 @@ body .main .portfolio:first-child {
   }
 
   .portfolio {
-    margin: auto;
     margin-bottom: 0 !important;
   }
   .portfolio figure {
     width: 290px !important;
+    display: block !important;
+    margin: auto !important;
+    margin-bottom: 15px !important;
   }
   .portfolio:first-child {
     margin: 50px 0 0 0 !important;

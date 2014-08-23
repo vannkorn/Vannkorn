@@ -92,6 +92,7 @@ body {
 				height: 224px;
 				cursor: pointer;
 				margin-bottom: 5px;
+				padding: 0;
 				
 				img {
 					position: relative;
@@ -101,10 +102,10 @@ body {
 				}
 				figcaption {
 					padding: 2em;
-					color: #333;
+					color: #fff;
 					text-align: left;
 					text-transform: uppercase;
-					font-size: 1.25em;
+					font-size: 1em;
 					-webkit-backface-visibility: hidden;
 					backface-visibility: hidden;
 					position: absolute;
@@ -134,11 +135,14 @@ body {
 					word-spacing: -0.15em;
 					font-weight: 300;
 					margin: 0;
+					font-size: 1.5em;
+					visibility: hidden;
 				}
 				p {
 					margin: 0;
 					letter-spacing: 1px;
 					font-size: 68.5%;
+					visibility: hidden;
 				}
 				
 				/*---------------*/
@@ -148,6 +152,7 @@ body {
 				&.effect-sarah {
 					
 					img {
+						opacity: 1;
 						width: -webkit-calc(100% + 20px);
 						width: calc(100% + 20px);
 						-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -158,15 +163,21 @@ body {
 						backface-visibility: hidden;
 					}
 					&:hover {
+						background: #00cccc;
+						
 						img {
-							opacity: 0.6;
+							opacity: 0.1;
 							-webkit-transform: translate3d(0,0,0);
 							transform: translate3d(0,0,0);
 						}
 						p {
+							visibility: visible;
 							opacity: 1;
 							-webkit-transform: translate3d(0,0,0);
 							transform: translate3d(0,0,0);
+						}
+						h2 {
+							visibility: visible;
 						}
 						h2::after {
 							-webkit-transform: translate3d(0,0,0);
@@ -218,11 +229,13 @@ body {
 		float: none !important;
 	}
 	.portfolio {
-		margin: auto;
 		margin-bottom: 0 !important;
 		
 		figure {
 			width: 290px !important;
+			display: block !important;
+			margin: auto !important;
+			margin-bottom: 15px !important;
 		}
 		&:first-child {
 			margin: 50px 0 0 0 !important;
