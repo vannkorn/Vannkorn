@@ -78,7 +78,7 @@ body {
 			}
 		}
 		.portfolio {
-			margin-top: 50px;
+			margin-bottom: 50px;
 			
 			figure {
 				position: relative;
@@ -206,6 +206,9 @@ body {
 					}
 				}
 			}
+			&:first-child {
+				margin: 50px 0 0 0 !important;
+			}
 		}
 	}
 }
@@ -213,6 +216,17 @@ body {
 @media screen and ( max-width: 767px ) {
 	.nav {
 		float: none !important;
+	}
+	.portfolio {
+		margin: auto;
+		margin-bottom: 0 !important;
+		
+		figure {
+			width: 290px !important;
+		}
+		&:first-child {
+			margin: 50px 0 0 0 !important;
+		}
 	}
 }
 

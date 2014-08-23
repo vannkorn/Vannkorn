@@ -49,7 +49,7 @@ body .main .about blockquote {
   font-size: 1.3em;
 }
 body .main .portfolio {
-  margin-top: 50px;
+  margin-bottom: 50px;
 }
 body .main .portfolio figure {
   position: relative;
@@ -166,10 +166,24 @@ body .main .portfolio figure.effect-sarah p {
   -webkit-transform: translate3d(100%, 0, 0);
   transform: translate3d(100%, 0, 0);
 }
+body .main .portfolio:first-child {
+  margin: 50px 0 0 0 !important;
+}
 
 @media screen and (max-width: 767px) {
   .nav {
     float: none !important;
+  }
+
+  .portfolio {
+    margin: auto;
+    margin-bottom: 0 !important;
+  }
+  .portfolio figure {
+    width: 290px !important;
+  }
+  .portfolio:first-child {
+    margin: 50px 0 0 0 !important;
   }
 }
 /* ---------------------------- Miscillanoeus ------------------ */
