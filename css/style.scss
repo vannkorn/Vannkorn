@@ -79,17 +79,19 @@ body {
 		}
 		.portfolio {
 			margin-bottom: 50px;
+			text-align: center;
 			
 			figure {
 				position: relative;
 				display: inline-block;
+				vertical-align: top;
 				z-index: 1;
 				overflow: hidden;
-				margin: -0.135em;
+				float: none;
 				background: transparent;
 				text-align: center;
 				width: 390px;
-				height: 224px;
+				height: 400px;
 				cursor: pointer;
 				margin-bottom: 5px;
 				padding: 0;
@@ -233,6 +235,7 @@ body {
 		
 		figure {
 			width: 290px !important;
+			height: 300px !important;
 			display: block !important;
 			margin: auto !important;
 			margin-bottom: 15px !important;
