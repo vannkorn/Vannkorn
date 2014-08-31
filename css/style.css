@@ -193,8 +193,7 @@ body .main .portfolio:first-child {
     margin-bottom: 0 !important;
   }
   .portfolio figure {
-    width: 290px !important;
-    height: 300px !important;
+    max-width: 100% !important;
     display: block !important;
     margin: auto !important;
     margin-bottom: 15px !important;
